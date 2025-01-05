@@ -1,7 +1,9 @@
+
 deployment:
   tasks:
+    # Define deployment and build paths
     - export DEPLOYPATH=/home/kanpower/public_html
-    - export REPOPATH=/home/kanpower/repositories/QR-Code-Generatorv1
-    # Delete the .git directory to avoid conflicts with deployment.
-    - /bin/rm -rf $REPOPATH/.git
- 
+    - export BUILDPATH=dist
+
+    # Copy build files to the deployment path
+    - /bin/cp -r $BUILDPATH/* $DEPLOYPATH
