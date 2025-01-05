@@ -1,7 +1,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kanpower/public_html
-    - export REPOPATH=/home/kanpower/repositories/app_to_test_new
+    - export REPOPATH=/home/kanpower/repositories/convert_PDF_to_QRCode
     # Delete the .git directory to avoid conflicts with deployment.
     - /bin/rm -rf $REPOPATH/.git
  
