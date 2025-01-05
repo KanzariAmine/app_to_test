@@ -1,7 +1,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kanpower/public_html
-    - export REPOPATH=/home/kanpower/repositories/app_to_test_last
+    - export REPOPATH=/home/kanpower/repositories/app_to_test_new
     # Delete the .git directory to avoid conflicts with deployment.
     - /bin/rm -rf $REPOPATH/.git
  
