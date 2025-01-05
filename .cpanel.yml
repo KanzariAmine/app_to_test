@@ -1,9 +1,6 @@
-
 deployment:
   tasks:
-    # Define deployment and build paths
     - export DEPLOYPATH=/home/kanpower/public_html
-    - export BUILDPATH=dist
-
-    # Copy build files to the deployment path
-    - /bin/cp -r $BUILDPATH/* $DEPLOYPATH
+    - export REPOPATH=/home/kanpower/repositories/dashboard
+    # Delete the .git directory to avoid conflicts with deployment.
+    - /bin/rm -rf $REPOPATH/.git
