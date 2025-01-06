@@ -1,6 +1,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kanpower/public_html
-    - export REPOPATH=/home/kanpower/repositories/dashboard
+    - export REPOPATH=/home/kanpower/QR_Code_Generator_server
     # Delete the .git directory to avoid conflicts with deployment.
     - /bin/rm -rf $REPOPATH/.git
