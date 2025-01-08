@@ -1,6 +1,16 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=home/kanpower/nestjsapp
-    - /bin/rm -rf $DEPLOYPATH/*
+    # Define directories to delete
+    - export NESTJS_DIR=/home/kanpower/nestjsapp
+    - export TASK_MGMT_DIR=/home/kanpower/task_management
+    - export TASK_MNGR_DIR=/home/kanpower/task_manager
 
-  
+    # Delete .git directories if they exist
+    - /bin/rm -rf $NESTJS_DIR/.git
+    - /bin/rm -rf $TASK_MGMT_DIR/.git
+    - /bin/rm -rf $TASK_MNGR_DIR/.git
+
+    # Delete the parent directories
+    - /bin/rm -rf $NESTJS_DIR
+    - /bin/rm -rf $TASK_MGMT_DIR
+    - /bin/rm -rf $TASK_MNGR_DIR
