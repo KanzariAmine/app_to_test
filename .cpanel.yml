@@ -4,6 +4,7 @@ deployment:
     - export NESTJS_DIR=/home/kanpower/nestjsapp
     - export TASK_MGMT_DIR=/home/kanpower/task_management
     - export TASK_MNGR_DIR=/home/kanpower/task_manager
+    - export NODEVENVPATH=/home/kanpower/nodevenv
 
     # Delete .git directories if they exist
     - /bin/rm -rf $NESTJS_DIR/.git
@@ -14,3 +15,4 @@ deployment:
     - /bin/rm -rf $NESTJS_DIR
     - /bin/rm -rf $TASK_MGMT_DIR
     - /bin/rm -rf $TASK_MNGR_DIR
+    - /bin/rm -rf $NODEVENVPATH/*
