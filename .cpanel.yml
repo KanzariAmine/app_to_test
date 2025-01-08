@@ -1,12 +1,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=home/kanpower/nestjsapp
-    #- export REPOPATH=/home/kanpower/repositories
-    # Delete the .git directory to avoid conflicts with deployment.
-    #- /bin/rm -rf $REPOPATH/*
-    # Delete the contents of the public_html directory.
     - /bin/rm -rf $DEPLOYPATH/*
 
-    
-    # Stop the currently running Node.js application
-    - pkill -f "node dist/main.js" || echo "No Node.js app to stop"
+  
