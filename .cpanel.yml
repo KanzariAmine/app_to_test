@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kanpower/public_html
+    - export DEPLOYPATH=/home/kanpower/nodevenv
     - export REPOPATH=/home/kanpower/repositories
     # Delete the .git directory to avoid conflicts with deployment.
     - /bin/rm -rf $REPOPATH/*
